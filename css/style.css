@@ -40,7 +40,7 @@ body {
 .line-1,
 .line-3 {
   width: 1.8rem;
-  transition: width 0.3s;
+  transition: all 0.3s;
 }
 
 .menu-icon:hover .line {
@@ -90,7 +90,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  transition: left .5s;
+  transition: left 0.8s cubic-bezier(1, 0, 0, 1);
 }
 
 .navigation-heading {
@@ -110,7 +110,7 @@ body {
   width: 30rem;
   padding: 1rem 2rem;
   background-color: rgba(0, 0, 0, 0.3);
-  font-family: "Josephin Sans", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   font-size: 1.6rem;
   color: #deaa86;
   letter-spacing: 0.1rem;
@@ -171,7 +171,7 @@ body {
   position: absolute;
   top: 1rem;
   left: -4rem;
-  transition: width .5s cubic-bezier(1, 0, 0, 1);
+  transition: width 0.5s cubic-bezier(1, 0, 0, 1);
 }
 
 .navigation-link::after {
@@ -182,7 +182,7 @@ body {
   position: absolute;
   top: 1rem;
   right: -4rem;
-  transition: width .5s cubic-bezier(1, 0, 0, 1);
+  transition: width 0.5s cubic-bezier(1, 0, 0, 1);
 }
 
 .navigation-link:hover {
@@ -195,13 +195,87 @@ body {
 }
 
 .copyright {
-    color: #fff;
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
 }
 
 .checkbox:checked ~ .navigation {
-    left: 8rem;
+  left: 8rem;
+}
+
+.checkbox:checked ~ .sidebar .line-1 {
+    transform: rotate(-405deg) translate(-5px, 6px);
+    width: 2.5rem;
+}
+
+.checkbox:checked ~ .sidebar .line-2 {
+    opacity: 0;
+}
+
+.checkbox:checked ~ .sidebar .line-3 {
+    transform: rotate(405deg) translate(-5px, -6px);
+    width: 2.5rem;
 }
 /* end navigation */
 /* end navbar */
+
+/* header */
+.header {
+    margin-left: 8rem;
+    height: 100vh;
+    background: linear-gradient(to top, rgba(0,0,0,.6),  rgba(0,0,0,.5)), url(../img/header-1.jpeg) center no-repeat;
+    background-size: cover;
+}
+
+.brand {
+    display: flex;
+    cursor: pointer;
+}
+
+.hotel-heading {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 2.7rem;
+    font-weight: 400;
+    color: #deaa86;
+    letter-spacing: .2rem;
+}
+
+.banner {
+    color: #ddd;
+    height: 65rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-heading {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 7rem;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.banner-paragraph {
+    font-size: 3.5rem;
+    font-weight: 300;
+}
+
+.banner-button {
+    width: 21rem;
+    padding: 1.2rem 2rem;
+    font-size: 2rem;
+    color: #333;
+    letter-spacing: .1rem;
+    border: none;
+    border-radius: 10rem;
+    outline: none;
+    background: linear-gradient(to right, gold, goldenrod);
+    cursor: pointer;
+}
+
+.banner-button:hover {
+    background: linear-gradient(to left, gold, goldenrod);
+}
+/* end header */
